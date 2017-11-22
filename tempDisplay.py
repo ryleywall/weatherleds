@@ -1,4 +1,4 @@
-#--------------------------------------
+--------------------------------------
 #Authors: Ryley Wall & Austin Pelltier
 #Wentworth Institute of Technolgy
 #Networking Programming final project
@@ -70,10 +70,8 @@ if __name__ == '__main__':
 	
 	BOSTON = '646259b409b04e6f13d26b88a31e3ba2' , 42.3601, -71.0589
 	
-	boston = forecast(*BOSTON)
-	temperature = boston.temperature
-	print 'The temperature is: ' , temperature
-	displayColor = temp2Color(temperature)
-	colorPut(displayColor)
-	
-	
+	with forecast(*BOSTON) as boston:	
+		temperature = boston.temperature
+		print 'The temperature is: ' , temperature
+		displayColor = temp2Color(temperature)
+		colorPut(displayColor)
