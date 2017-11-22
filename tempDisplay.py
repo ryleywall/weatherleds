@@ -68,7 +68,7 @@ if __name__ == '__main__':
 	# Intialize the library (must be called once before other functions).
 	strip.begin()
 	
-	BOSTON = '646259b409b04e6f13d26b88a31e3ba2' , 42.3601, -71.0589
+	BOSTON = 'key' , 42.3601, -71.0589
 	
 	with forecast(*BOSTON) as boston:	
 		temperature = boston.temperature
