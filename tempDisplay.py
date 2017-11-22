@@ -42,10 +42,10 @@ def temp2Color(temp):
 	section = diff / 2.0
 	secNum = 0
 	ratio = (temp - minTemp) / section
-	if temp < tempMin:
+	if temp < minTemp:
 		colorPut(strip , Color(0 , 0 , 255))
 		return
-	elif temp > tempMax:
+	elif temp > maxTemp:
 		colorPut(strip , Color(255 , 0 , 0))
 		return
 	
@@ -75,3 +75,5 @@ if __name__ == '__main__':
 		print 'The temperature is: ' , temperature
 		displayColor = temp2Color(temperature)
 		colorPut(displayColor)
+	
+	
