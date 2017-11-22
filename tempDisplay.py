@@ -53,10 +53,10 @@ def temp2Color(temp):
 		ratio = (temp - minTemp + section) / section
 		secNum = secNum + 1
 	
-	if secNum = 0:
+	if secNum == 0:
 		colorPut(strip , Color(0 , 255.0*ratio , 255 - 255.0*ratio))
 		return
-	elif secNum = 1:
+	elif secNum == 1:
 		colorPut(strip , Color( 255*ratio , 255 - 255.0*ratio , 0 ))
 		return
 	
